@@ -26,7 +26,7 @@
         android:background="@drawable/rounded_button"
         android:padding="10dp"
         android:text="Signup"
-        android:textColor="#ffffff"
+        android:textColor="#81D4FA"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
