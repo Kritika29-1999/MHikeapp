@@ -6,5 +6,6 @@
             <corners android:radius="100dip" />
             
     </shape>
+        <color android:color="#66FFFFFF"></color>
     </item>
 </selector>
