@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#91E8E1"
+
+    tools:context=".HikeDetails">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/hikename2"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginTop="60dp"
+                android:background="#80FFFFFF"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:fontFamily="@font/assistant_extralight"
+                android:hint="Enter Hike Name"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColorHint="#CC56656C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/hikelocation2"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:background="#80FFFFFF"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:fontFamily="@font/assistant_extralight"
+                android:hint="Enter Hike Location"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColorHint="#CC56656C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hikename2" />
+
+            <TextView
+                android:id="@+id/hikedate2"
+                android:layout_width="236dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:layout_margin="20dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="#63CA5D5D"
+                android:backgroundTintMode="add"
+                android:ems="10"
+                android:fontFamily="@font/assistant_extralight"
+                android:hint="Enter Hike Location"
+                android:onClick="openDateFragment"
+                android:text="Pick Hike Date"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#CC56656C"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hikelocation2" />
+
+            <TextView
+                android:id="@+id/textView42"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/assistant_extralight"
+                android:text="Parking available?"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.325"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hikedate2" />
+
+            <RadioGroup
+                android:id="@+id/Parking2"
+                android:layout_width="245dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="10dp"
+                android:checkedButton="@+id/Parkingyes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView42">
+
+                <RadioButton
+                    android:id="@+id/Parkingyes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:fontFamily="@font/assistant_extralight"
+                    android:text="Yes" />
+
+                <RadioButton
+                    android:id="@+id/Parkingno2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/assistant_extralight"
+                    android:text="No" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/hikelength2"
+                android:layout_width="247dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="30dp"
+                android:background="#80FFFFFF"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:fontFamily="@font/assistant_extralight"
+                android:hint="Enter Hike Length"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColorHint="#CC56656C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Parking2" />
+
+            <Button
+                android:id="@+id/updatebutton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:backgroundTint="#992B2D3A"
+                android:backgroundTintMode="src_in"
+                android:cursorVisible="true"
+                android:shadowColor="#555050"
+                android:text="Update Hike"
+                android:textColor="#EAE3E3"
+
+
+                android:textSize="16sp"
+                app:cornerRadius="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description2" />
+
+            <Button
+                android:id="@+id/deletebutton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#992B2D3A"
+                android:backgroundTintMode="src_in"
+                android:cursorVisible="true"
+                android:shadowColor="#555050"
+                android:text="Delete Hike"
+                android:textColor="#EAE3E3"
+
+
+                android:textSize="16sp"
+                app:cornerRadius="60dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updatebutton" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="246dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:backgroundTint="#72FFFFFF"
+                android:spinnerMode="dropdown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hikelength2" />
+
+            <EditText
+                android:id="@+id/description2"
+                android:layout_width="250dp"
+                android:layout_height="175dp"
+                android:layout_marginTop="30dp"
+                android:background="#80FFFFFF"
+                android:cursorVisible="true"
+                android:ems="10"
+                android:fontFamily="@font/assistant_extralight"
+                android:hint="Description"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColorHint="#445055"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-thin"
+                android:text="Edit Hike Here"
+                android:textColor="#E91E63"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/hikename2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.444" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

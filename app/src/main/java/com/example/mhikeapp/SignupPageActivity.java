@@ -2,6 +2,7 @@ package com.example.mhikeapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +44,9 @@ public class SignupPageActivity extends AppCompatActivity {
                 }
                 try {
                     dbHandler.addUsers(fullName, email, password);
+
+                    Intent intent = new Intent(SignupPageActivity.this, LandingPageActivity.class);
+                    startActivity(intent);
                     Toast.makeText(SignupPageActivity.this, "You have been successfully signed up", Toast.LENGTH_SHORT).show();
 
                 }

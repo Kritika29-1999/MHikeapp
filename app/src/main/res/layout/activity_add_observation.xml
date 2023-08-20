@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addObservation">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF5722"
+        android:fontFamily="@font/cinzel_bold"
+        android:text="Add Observation"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerobs"
+        android:layout_width="246dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="55dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#28AAA1A1"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="122dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/frank_ruhl_libre_light"
+        android:text="Select Observation Type"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerobs"
+        app:layout_constraintHorizontal_bias="0.695"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/obsdate"
+        android:layout_width="246dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="19dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#28AAA1A1"
+        android:onClick="openDateFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="122dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/frank_ruhl_libre_light"
+        android:text="Observation Date"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/obsdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+
+        android:id="@+id/obstime"
+        android:layout_width="246dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="19dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#28AAA1A1"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview12"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textview12"
+        android:layout_width="122dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="19dp"
+        android:fontFamily="@font/frank_ruhl_libre_light"
+        android:text="Observation Time"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/obstime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <EditText
+        android:id="@+id/obscomment"
+        android:layout_width="246dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="#28AAA1A1"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textview23"
+        app:layout_constraintTop_toBottomOf="@+id/textview12" />
+
+    <TextView
+        android:id="@+id/textview23"
+        android:layout_width="122dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/frank_ruhl_libre_light"
+        android:text="Additional Comments"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/obscomment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview12" />
+
+    <Button
+        android:id="@+id/addobsbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:background="#45CD1E1E"
+        android:backgroundTint="#70A56F6F"
+        android:text="Add observation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/obscomment" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

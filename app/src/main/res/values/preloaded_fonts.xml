@@ -2,7 +2,10 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/assistant_extralight</item>
+        <item>@font/barrio</item>
         <item>@font/berkshire_swash</item>
+        <item>@font/cinzel_bold</item>
+        <item>@font/frank_ruhl_libre_light</item>
         <item>@font/hanalei_fill</item>
         <item>@font/unlock</item>
     </array>
